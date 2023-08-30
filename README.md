@@ -1,6 +1,6 @@
-// https://react-todolist-85uu.vercel.app/
+// Deploy https://todolist-final.vercel.app/
 
-// https://github.com/YuriyEG/react-todolist.git
+// Repository https://github.com/YuriyEG/todolist-final
 
 
 
