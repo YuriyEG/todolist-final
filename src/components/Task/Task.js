@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import Edit from '../Edit/Edit';
 
-function Task({ value, deleteTask, setTodoList, id, onToggleImportant, onToggleDone, important, done, time }) {
+function Task({ value, deleteTask, setTodoList, id, onToggleDone, important, done, time }) {
   const [editStatus, setEditStatus] = useState(false);
   const [editValue, setEditValue] = useState(value);
 
