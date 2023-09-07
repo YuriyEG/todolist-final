@@ -51,10 +51,12 @@ function Task({ value, deleteTask, setTodoList, id, onToggleImportant, onToggleD
   const todoItem = (
     <div>
       <li>
-        <div className="view" onClick={onToggleDone}>
-          <div className={checkClass} onClick={onToggleImportant}></div>
+        <div className="view">
+          <div className={checkClass} onClick={onToggleDone}></div>
           <label>
-            <span className={taskClass}>{value}</span>
+            <span className={taskClass} onClick={onToggleDone}>
+              {value}
+            </span>
             <span className="created">created {distance} ago</span>
           </label>
           <button className="icon icon-edit" onClick={initialEdit}></button>
