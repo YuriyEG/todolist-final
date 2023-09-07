@@ -21,7 +21,7 @@ function Task({ value, deleteTask, setTodoList, id, onToggleImportant, onToggleD
   }
 
   let checkClass = '';
-  if (important) {
+  if (done) {
     checkClass = 'checkedImageBase checkedImage';
   } else {
     checkClass = 'checkedImageBase uncheckedImage';
@@ -47,12 +47,10 @@ function Task({ value, deleteTask, setTodoList, id, onToggleImportant, onToggleD
   const todoItem = (
     <div>
       <li>
-        <div className="view">
+        <div className="view" onClick={onToggleDone}>
           <div className={checkClass} onClick={onToggleImportant}></div>
           <label>
-            <span className={taskClass} onClick={onToggleDone}>
-              {value}
-            </span>
+            <span className={taskClass}>{value}</span>
             <span className="created">created {distance} ago</span>
           </label>
           <button className="icon icon-edit" onClick={initialEdit}></button>
