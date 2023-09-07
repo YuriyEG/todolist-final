@@ -13,7 +13,6 @@ const Edit = ({ editValue, setValue, saveTodo, closeEdit }) => {
           height: '600px',
           top: '-180px',
           left: '-200px',
-          border: '1px solid black',
           zIndex: '8',
         }}
         onClick={closeEdit}
