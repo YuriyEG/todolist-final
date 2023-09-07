@@ -124,7 +124,7 @@ class TodoApp extends React.Component {
     const doneCount = this.state.todoList.filter((el) => el.done).length;
     const todoCount = this.state.todoList.length - doneCount;
     return (
-      <div className="todoapp">
+      <div className="todoapp" style={{ position: 'relative' }}>
         <section className="main">
           <NewTaskForm createTask={createTask} />
           <TaskList

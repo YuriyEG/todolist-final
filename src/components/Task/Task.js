@@ -42,6 +42,10 @@ function Task({ value, deleteTask, setTodoList, id, onToggleImportant, onToggleD
     }
   };
 
+  const closeEdit = () => {
+    setTodoList(id, editValue);
+    setEditStatus(false);
+  };
   const distance = formatDistanceToNow(time, { includeSeconds: true });
 
   const todoItem = (
@@ -60,7 +64,15 @@ function Task({ value, deleteTask, setTodoList, id, onToggleImportant, onToggleD
     </div>
   );
 
-  return <div>{editStatus ? <Edit saveTodo={saveTodo} editValue={editValue} setValue={setValue} /> : todoItem}</div>;
+  return (
+    <div>
+      {editStatus ? (
+        <Edit saveTodo={saveTodo} closeEdit={closeEdit} editValue={editValue} setValue={setValue} />
+      ) : (
+        todoItem
+      )}
+    </div>
+  );
 }
 
 Task.defaultProps = {

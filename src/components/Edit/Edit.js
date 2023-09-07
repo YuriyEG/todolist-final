@@ -3,9 +3,21 @@ import PropTypes from 'prop-types';
 
 import './Edit.css';
 
-const Edit = ({ editValue, setValue, saveTodo }) => {
+const Edit = ({ editValue, setValue, saveTodo, closeEdit }) => {
   return (
     <li className="editing">
+      <div
+        style={{
+          position: 'absolute',
+          width: '1000px',
+          height: '600px',
+          top: '-180px',
+          left: '-200px',
+          border: '1px solid black',
+          zIndex: '8',
+        }}
+        onClick={closeEdit}
+      ></div>
       <div className="view">
         <input className="toggle" type="checkbox" />
         <label>
@@ -21,6 +33,7 @@ const Edit = ({ editValue, setValue, saveTodo }) => {
         onKeyDown={(e) => saveTodo(e)}
         onChange={(e) => setValue(e)}
         className="edit"
+        style={{ zIndex: '9' }}
       />
     </li>
   );
