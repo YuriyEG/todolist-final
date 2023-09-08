@@ -127,6 +127,7 @@ class TodoApp extends React.Component {
       <div className="todoapp" style={{ position: 'relative' }}>
         <section className="main">
           <NewTaskForm createTask={createTask} />
+
           <TaskList
             todoList={filteredTasks}
             deleteTask={deleteTask}

@@ -1,7 +1,9 @@
-//  Deploy https://todo-block1.vercel.app
+//  Deploy https://todo-block1.vercel.app/ timer-todolist
+
+
 
 // Repository https://github.com/YuriyEG/todolist-final
-
+//  Deploy https://todo-block1.vercel.app todolist
 
 
 
