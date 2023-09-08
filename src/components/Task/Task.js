@@ -3,6 +3,7 @@ import { formatDistanceToNow } from 'date-fns';
 import './Task.css';
 import PropTypes from 'prop-types';
 
+import Timer from '../Timer/Timer';
 import Edit from '../Edit/Edit';
 
 function Task({ value, deleteTask, setTodoList, id, onToggleDone, important, done, time }) {
@@ -54,9 +55,8 @@ function Task({ value, deleteTask, setTodoList, id, onToggleDone, important, don
         <div className="view">
           <div className={checkClass} onClick={onToggleDone}></div>
           <label>
-            <span className={taskClass} onClick={onToggleDone}>
-              {value}
-            </span>
+            <span className={taskClass}>{value}</span>
+            <Timer />
             <span className="created">created {distance} ago</span>
           </label>
           <button className="icon icon-edit" onClick={initialEdit}></button>
